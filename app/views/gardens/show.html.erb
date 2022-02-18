@@ -18,6 +18,12 @@
 
               <i class="fas fa-fire destroy-plant"></i>
             <% end %>
+            <div class="card-tags">
+              <% plant.tags.each do |tag| %>
+                <span> <%= tag.name %> </span>
+              <% end %>
+              <%= link_to "+", new_plant_plant_tag_path(plant) %>
+            </div>
           </div>
         </div>
       <% end %>
